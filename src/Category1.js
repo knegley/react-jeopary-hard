@@ -28,34 +28,54 @@ const Category1 = ({ routes }) => {
       <h5>Category 1</h5>
       <h6>{jepData.categories[0]}</h6>
       {questionValues}
+
       {question0Match && (
         <div>
+          <br />
+          <div>Question</div>
+          <br />
           {jepData.questionList[0][0].question}
+          <br />
           {<AnswerChecker question={jepData.questionList[0][0]} />}
         </div>
       )}
       {question1Match && (
         <div>
+          <br />
+          <div>Question</div>
+          <br />
           {jepData.questionList[0][1].question}
-          {<AnswerChecker question={jepData.questionList[0][1]} />}
+          <br />
+          <div>{<AnswerChecker question={jepData.questionList[0][1]} />}</div>
         </div>
       )}
       {question2Match && (
         <div>
+          <br />
+          <div>Question</div>
+          <br />
           {jepData.questionList[0][2].question}
+          <br />
           {<AnswerChecker question={jepData.questionList[0][2]} />}
         </div>
       )}
       {question3Match && (
         <div>
+          <br />
+          <div>Question</div>
+          <br />
           {jepData.questionList[0][3].question}
-
+          <br />
           {<AnswerChecker question={jepData.questionList[0][3]} />}
         </div>
       )}
       {question4Match && (
         <div>
+          <br />
+          <div>Question</div>
+          <br />
           {jepData.questionList[0][4].question}
+          <br />
           {<AnswerChecker question={jepData.questionList[0][4]} />}
         </div>
       )}

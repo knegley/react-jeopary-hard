@@ -11,7 +11,6 @@ const AnswerChecker = ({ question }) => {
   console.log(question);
 
   const validate = input => {
-    document.querySelector("#submission").value = "";
     console.log(jepData);
     console.log(input);
     console.log(jepData.questionList);
@@ -31,6 +30,11 @@ const AnswerChecker = ({ question }) => {
     document.querySelector("#submitButton").disabled = true;
     let value = question.value;
     console.log(value);
+
+    document.querySelector("#userAnswer").textContent = input;
+    document.querySelector("#actualAnswer").textContent = question.answer;
+    document.querySelector("#submission").value = "";
+
     validate(input);
     console.log(question);
     const isCorrect = validate(input) === validate(question.answer);
@@ -41,13 +45,27 @@ const AnswerChecker = ({ question }) => {
 
   return (
     <React.Fragment>
-      <input type="text" id="submission" />
+      <br />
+      <input
+        type="text"
+        id="submission"
+        autoFocus
+        placeholder="type answer here"
+      />
       <input
         type="button"
         id="submitButton"
         value="submit"
         onClick={handleClick}
       />
+      <br />
+      <div>Your Answer</div>
+      <br />
+      <div id="userAnswer"></div>
+      <br />
+      <div>Actual Answer</div>
+      <br />
+      <div id="actualAnswer" />
     </React.Fragment>
   );
 };

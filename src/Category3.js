@@ -31,31 +31,51 @@ const Category3 = ({ routes }) => {
 
       {question0Match && (
         <div>
+          <br />
+          <div>Question</div>
+          <br />
           {jepData.questionList[2][0].question}
+          <br />
           {<AnswerChecker question={jepData.questionList[2][0]} />}
         </div>
       )}
       {question1Match && (
         <div>
+          <br />
+          <div>Question</div>
+          <br />
           {jepData.questionList[2][1].question}
+          <br />
           {<AnswerChecker question={jepData.questionList[2][1]} />}
         </div>
       )}
       {question2Match && (
         <div>
+          <br />
+          <div>Question</div>
+          <br />
           {jepData.questionList[2][2].question}
+          <br />
           {<AnswerChecker question={jepData.questionList[2][2]} />}
         </div>
       )}
       {question3Match && (
         <div>
+          <br />
+          <div>Question</div>
+          <br />
           {jepData.questionList[2][3].question}
+          <br />
           {<AnswerChecker question={jepData.questionList[2][3]} />}
         </div>
       )}
       {question4Match && (
         <div>
+          <br />
+          <div>Question</div>
+          <br />
           {jepData.questionList[2][4].question}
+          <br />
           {<AnswerChecker question={jepData.questionList[2][4]} />}
         </div>
       )}
