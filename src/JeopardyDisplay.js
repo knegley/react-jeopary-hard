@@ -8,12 +8,17 @@ import Category3 from "./Category3";
 const JeopardyDisplay = props => {
   const { jepData } = React.useContext(JepContext);
 
-  const routes = jepData.categories.map(value => value.split(" ").join(""));
+  const routes = jepData.categories.map(value =>
+    value
+      .split(" ")
+      .join("")
+      .replace("?", "")
+  );
   // console.log(routes);
 
-  const category1Match = useRouteMatch(`/${routes[0]}`);
-  const category2Match = useRouteMatch(`/${routes[1]}`);
-  const catggory3Match = useRouteMatch(`/${routes[2]}`);
+  const category1Match = useRouteMatch({ path: `/${routes[0]}` });
+  const category2Match = useRouteMatch({ path: `/${routes[1]}` });
+  const catggory3Match = useRouteMatch({ path: `/${routes[2]}` });
 
   const categories = jepData.categories.map((value, index) => {
     return (

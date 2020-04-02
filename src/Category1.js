@@ -1,6 +1,7 @@
 import React from "react";
 import { JepContext } from "./Jeopardy";
 import { Link, useRouteMatch } from "react-router-dom";
+import AnswerChecker from "./AnswerChecker";
 
 const Category1 = ({ routes }) => {
   const { jepData } = React.useContext(JepContext);
@@ -22,13 +23,6 @@ const Category1 = ({ routes }) => {
       );
     });
 
-  const inputBox = (
-    <>
-      <input type="text" />
-      <input type="button" value="Submit" />
-    </>
-  );
-
   return (
     <React.Fragment>
       <h5>Category 1</h5>
@@ -37,31 +31,32 @@ const Category1 = ({ routes }) => {
       {question0Match && (
         <div>
           {jepData.questionList[0][0].question}
-          <p>{inputBox}</p>
+          {<AnswerChecker question={jepData.questionList[0][0]} />}
         </div>
       )}
       {question1Match && (
         <div>
           {jepData.questionList[0][1].question}
-          <p>{inputBox}</p>
+          {<AnswerChecker question={jepData.questionList[0][1]} />}
         </div>
       )}
       {question2Match && (
         <div>
           {jepData.questionList[0][2].question}
-          <p>{inputBox}</p>
+          {<AnswerChecker question={jepData.questionList[0][2]} />}
         </div>
       )}
       {question3Match && (
         <div>
           {jepData.questionList[0][3].question}
-          <p>{inputBox}</p>
+
+          {<AnswerChecker question={jepData.questionList[0][3]} />}
         </div>
       )}
       {question4Match && (
         <div>
           {jepData.questionList[0][4].question}
-          <p>{inputBox}</p>
+          {<AnswerChecker question={jepData.questionList[0][4]} />}
         </div>
       )}
     </React.Fragment>

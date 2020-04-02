@@ -2,11 +2,11 @@ import React from "react";
 import JeopardyDisplay from "./JeopardyDisplay";
 
 export const JepContext = React.createContext();
+export const QUESTIONS = "QUESTIONS";
+export const CATEGORIES = "CATEGORIES";
+export const SCORE = "SCORE";
 
 const Jeopary = props => {
-  const QUESTIONS = "QUESTIONS";
-  const CATEGORIES = "CATEGORIES";
-
   const initialState = {
     categories: [],
     score: 0,
@@ -19,6 +19,8 @@ const Jeopary = props => {
         return { ...state, categories: action.payload };
       case QUESTIONS:
         return { ...state, questionList: action.payload };
+      case SCORE:
+        return { ...state, score: state.score + action.payload };
 
       default:
         return state;
